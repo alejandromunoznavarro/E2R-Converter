@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}E2R Converter{% endblock %}
+
+{% block content %}
+<div class="cabecera mt-4 container-sm">
+    <h1 class="title">
+        E2R Converter
+    </h1>
+</div>
+<div class="app container mt-4">
+
+    <form method="post" enctype="multipart/form-data">
+
+        <div class="row text-center mt-4">
+
+
+            {% csrf_token %}
+            <div class="col-5">
+                <input type="file" name="myfile" class="archivo form-control" accept=".txt">
+            </div>
+            <div class="form-group col-2"></div>
+            <div class="col-5">
+                <button type="submit" class="botonE2R btn btn-outline-dark">
+                    <h6>Procesar archivo</h6><span class="spinner"></span>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="row text-center mt-4">
+            {% if file_procesado %}
+            {% load static %}
+            <div class="col-11"></div>
+            <div class="descarga col-1">
+                <a href="{% static '/temp/Procesado.txt' %}" download="Procesado"><img
+                        src="{% static '/img/descargar.png' %}" width="30px" height="30px" alt="Descargar"></a>
+            </div>
+            <div class="form-group col-5">
+                <label for="input">
+                    <h4 class="entrada">Original</h4>
+                </label>
+                <textarea placeholder="Archivo vacío" readonly class="form-control"
+                    rows="10">{{file_original}}</textarea>
+            </div>
+            <div class="form-group col-2"></div>
+            <div class="form-group col-5">
+                <label for="output">
+                    <h4 class="entrada">Traducido</h4>
+                </label>
+                <textarea placeholder="Archivo vacío" readonly class="form-control"
+                    rows="10">{{file_procesado}}</textarea>
+            </div>
+            {% elif file_alert %}
+            <div class="alert alert-danger" role="alert">
+                {{file_alert}}
+            </div>
+
+            {% endif %}
+
+        </div>
+    </form>
+</div>
+
+{% load static %}
+{% url 'index' as index_url %}
+<a class="volver" href="{{ index_url }}"><img src="{% static '/img/volver.png' %}"></a>
+{% endblock %}

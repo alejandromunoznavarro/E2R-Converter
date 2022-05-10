@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}E2R Converter{% endblock %}
+
+{% block content %}
+<div class="cabecera mt-4 container-sm">
+    <h1 class="title">
+        E2R Converter
+    </h1>
+</div>
+<div class="container mt-4">
+    
+    <form method="get" class="row text-center">
+        <div class="form-group col-5">
+            <label for="input"><h4>Entrada de Texto</h4></label>
+            <textarea name = "text1" placeholder="Escribe aquí" class="form-control" id="input" rows="10">{{text_original}}</textarea>
+            <input type="button" value="Borrar Texto" onclick="javascript:eraseText();" class="btn btn-outline-dark mt-4">
+            
+        </div>
+        <div class="form-group col-2"></div>
+        <div class="form-group col-5">
+            <label for="output"><h4>Salida de Texto</h4></label>
+            <textarea name = "text2" placeholder="Entrada de texto vacío" readonly class="form-control" id="output" rows="10">{{text_procesado}}</textarea>
+            
+            <button type="submit" class="btn btn-outline-dark mt-4"><h6>Procesar texto</h6></button>
+        </div>
+    </form>
+    
+    <form method="post" class="row text-center mt-4" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="col-5">
+            <input type="file" name="myfile" class="form-control" accept=".txt" >
+        </div>
+        <div class="form-group col-2"></div>
+        <div class="col-5">
+            <button type="submit" class="btn btn-outline-dark">Procesar archivo</button>
+        </div>
+        
+      
+    
+        {% if file_procesado %}
+        {% load static %}
+            <div class="col-1">
+                <label for="output" class="mt-4 float-left"><h4>Archivo:</h4></label>
+            </div>
+            <div class="col-10"></div>
+            <div class="col-1">
+                <a href="{% static '/temp/Procesado.txt' %}" download="Procesado"><img src="{% static '/img/descargar.png' %}" width="30px" height="30px" alt="Descargar"></a>
+            </div>
+            
+            <textarea placeholder="Archivo vacío" readonly class="form-control" rows="10">{{file_procesado}}</textarea>
+        {% elif file_alert %}    
+            <div class="alert alert-danger" role="alert">
+                {{file_alert}}
+          </div>
+        {% endif %}
+    </form>
+      
+    
+</div>
+{% endblock %}

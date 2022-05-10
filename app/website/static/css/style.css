@@ -1,0 +1,275 @@
+/* Corbel, Gill Sans, Helvética */
+html {
+    font-family: 'Gill Sans' !important;
+    min-height: 100% !important;
+    position: relative !important;
+    font-weight: normal !important;
+}
+
+body {
+    font-family: 'Gill Sans' !important;
+    color: black !important;
+    margin: 0 !important;
+    font-weight: normal !important;
+}
+
+main {
+    margin: 0 !important;
+    margin-bottom: 8% !important;
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: 'Gill Sans' !important;
+    letter-spacing: 1.5px !important;
+    color: black !important;
+    font-weight: normal !important;
+}
+
+#MenuNavegacion,
+.navbar-toggler {
+    margin-right: 8% !important;
+}
+
+/* TAM LETRA */
+.navbar-brand {
+    font-size: 22px !important;
+    color: black !important;
+    margin-left: 11% !important;
+}
+
+.nav-link {
+    font-size: 18px !important;
+    color: black !important;
+}
+
+h1 {
+    font-size: 20px !important;
+}
+
+h2 {
+    font-size: 19px !important;
+}
+
+h3 {
+    font-size: 18px !important;
+}
+
+h4 {
+    font-size: 17px !important;
+}
+
+h5 {
+    font-size: 16px !important;
+}
+
+h6 {
+    font-size: 15px !important;
+}
+
+p {
+    font-size: 14px !important;
+}
+
+footer {
+    position: absolute !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 40px !important;
+    font-weight: normal !important;
+    padding-top: 5px !important;
+}
+
+.bg-light,
+footer {
+    background-color: white !important;
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}
+
+
+
+/* CABECERA */
+.cabecera,
+.resumen {
+    width: 100% !important;
+    margin-top: 5% !important;
+}
+
+.cabecera>.title {
+    text-align: center !important;
+    font-size: 500% !important;
+    color: #306998 !important;
+    font-family: 'Gill Sans' !important;
+    letter-spacing: 1.5px !important;
+    font-weight: normal !important;
+}
+
+.cabecera>.autor {
+    text-align: center !important;
+    font-size: 200% !important;
+    font-family: 'Gill Sans' !important;
+    letter-spacing: 1.5px !important;
+    font-weight: normal !important;
+}
+
+.cabecera>.lugar {
+    text-align: center !important;
+    font-size: 100% !important;
+    font-family: 'Gill Sans' !important;
+    letter-spacing: 1.5px !important;
+    font-weight: normal !important;
+}
+
+.cabecera>.fecha {
+    text-align: center !important;
+    font-size: 100% !important;
+    font-family: 'Gill Sans' !important;
+    letter-spacing: 1.5px !important;
+    font-weight: normal !important;
+}
+
+
+
+/* RESUMEN */
+.resumen>h2 {
+    text-align: justify !important;
+    font-size: 125% !important;
+    max-width: 60ch !important;
+    font-family: 'Gill Sans' !important;
+    letter-spacing: 1.5px !important;
+    font-weight: normal !important;
+
+}
+
+.resumen>h2>a {
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Gill Sans' !important;
+    letter-spacing: 1.5px !important;
+    font-weight: normal !important;
+}
+
+.libreria>* {
+    width: 60% !important;
+    margin-top: 10% !important;
+}
+
+.libreria_texto {
+    margin-top: 10% !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 300% !important;
+    color: black !important;
+    text-decoration: none !important;
+    font-family: 'Gill Sans' !important;
+    letter-spacing: 1.5px !important;
+    font-weight: normal !important;
+}
+
+/* BOTONES */
+.botones {
+    margin-top: 8% !important;
+}
+
+.introbtn {
+
+    width: 50%;
+    height: auto;
+    background-color: #ffd43B !important;
+    border: 2px solid #306998 !important;
+    border-radius: 7px;
+    box-shadow: 0 0 1px 1px rgb(10, 10, 10);
+
+}
+
+.introbtn>h6 {
+    font-family: 'Gill Sans' !important;
+    font-size: 100% !important;
+    letter-spacing: 1.5px !important;
+    color: #306998 !important;
+    font-weight: normal !important;
+}
+
+
+/* APP TEXTO */
+.app {
+    margin-top: 5% !important;
+    min-height: 55vh !important;
+    max-height: 55vh !important;
+}
+
+.entrada {
+    font-size: 200% !important;
+}
+
+.form-control {
+    max-width: 60ch !important;
+    border-color: #306998 !important;
+    font-size: 20px !important;
+    font-family: 'Gill Sans' !important;
+    letter-spacing: 1.5px !important;
+    font-weight: normal !important;
+    background-color: white !important;
+}
+
+.botonE2R {
+
+    width: 50%;
+    height: auto;
+    background-color: #ffd43B !important;
+    border: 2px solid #306998 !important;
+    border-radius: 7px;
+    box-shadow: 0 0 1px 1px rgb(10, 10, 10);
+
+}
+
+.botonE2R>h6,
+input {
+    font-family: 'Gill Sans' !important;
+    font-size: 150% !important;
+    letter-spacing: 1.5px !important;
+    color: #306998 !important;
+    font-weight: normal !important;
+}
+.volver{
+    position: absolute !important;
+}
+.volver>img {
+    width: 20% !important;
+}
+
+.archivo {
+    height: auto;
+    background-color: #ffd43B !important;
+    border: 2px solid #306998 !important;
+    border-radius: 7px;
+    box-shadow: 0 0 1px 1px rgb(10, 10, 10);
+}
+
+/* SOLO EN GRANDE */
+@media (min-width:768px) {
+    .resumen {
+        column-count: 2;
+        column-gap: 10em;
+    }
+
+    .introbtn>h6 {
+        font-family: 'Gill Sans' !important;
+        font-size: 250% !important;
+        letter-spacing: 1.5px !important;
+        color: #306998 !important;
+        font-weight: normal !important;
+    }
+}
+

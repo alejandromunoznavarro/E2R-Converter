@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}E2R Converter{% endblock %}
+
+{% block content %}
+<div class="cabecera">
+    <h1 class="title">
+        E2R Converter
+    </h1>
+    <h3 class="autor">Alejandro Muñoz Navarro</h3>
+    <h4 class="lugar"> Universidad Politécnica de Madrid</h4>
+    <h5 class="fecha">2022</h5>
+</div>
+<div class="container resumen">
+    
+    <h2>
+        La Metodología de Lectura Fácil (easy-to-read en inglés) proporciona pautas para facilitar la comprensión de materiales a diferentes colectivos. 
+        Actualmente, la Metodología de Lectura Fácil se aplica de forma manual para conseguir la accesibilidad cognitiva de materiales.
+        En este proyecto se ha desarrollado un aplicación que permite aplicar de manera automática un subconjunto de las pautas de 
+        <a href=http://blog.intef.es/cniie/wp-content/uploads/sites/3/2016/06/LecturaFácil_1520.pdf><b>Lectura Fácil</b></a> a textos en castellano 
+        que contienen porcentajes (%) sustituyendo estos por palabras que conserven su significado.
+        Para ello hemos hecho uso de técnicas de Procesamiento del Lenguaje Natural (NLP) y de rangos de porcentajes.
+    </h2>
+    {% load static %}
+    <div class="row text-center align-items-center">
+        <div class="col-4"><a class="libreria" href="https://www.python.org"><img src="{% static '/img/python.png' %}"  alt="Librería Python" ></a></div>
+        <div class="col-4"><a class="libreria" href="https://spacy.io"><img src="{% static '/img/SpaCy_logo.png' %}"  alt="Librería SpaCy" ></a></div>
+        <div class="col-4"><a class="libreria_texto" href="https://www.nltk.org">NLTK</a></div>
+    </div>
+    
+</div>
+<div class="botones row text-center align-items-center">
+    <div class="col-6">
+        {% url 'e2r_converter_text' as e2r_converter_text_url %}
+        <a href="{{ e2r_converter_text_url }}" class="introbtn btn btn-outline-dark mt-4"><h6>Procesar texto</h6></a>
+    </div>
+    <div class="col-6">
+        {% url 'e2r_converter_file' as e2r_converter_file_url %}
+        <a href="{{ e2r_converter_file_url }}" class="introbtn btn btn-outline-dark mt-4"><h6>Procesar archivo</h6></a>
+    </div>
+    
+</div>
+{% endblock %}
